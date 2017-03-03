@@ -18,7 +18,7 @@
 	box1 {
 		height: 70px;
 		width: 70px;
-		border: 10px red;
+		border: 10px solid red;
 	}
 	</style>
 </head>
