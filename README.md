@@ -37,11 +37,7 @@
 		width: 70px;
 		border: 10px solid red;
 	}
-    textarea {
-    	margin-left:12%;
-        height:20px;
-        width:150px;
-    }
+    
     button {
     	border-radius:3px;
         height:23px;
