@@ -11,14 +11,14 @@
         
         function submitClient(){
         
-        	var result = '';
-        	objectOne.objName;
+        	var result;
+        	objectOne[objName];
             objectOne[objNum];
             objectOne[objCode];
             objectOne[objBus];
             
             console.log(objectOne);
-            result = objectOne.objName
+            result = result.concat(objectOne.getOwnPropertyNames(objectOne));
             return result;
         }
 	</script>
@@ -30,7 +30,7 @@
 		color: white;
 	}
 	p {
-		color:Lightgreen;
+		color:white;
 	}
 	box1 {
 		height: 70px;
