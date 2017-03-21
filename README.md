@@ -1,26 +1,22 @@
-
 <html>
 <head>
 	<title>Objects, Local Storage</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 	<script>
-		var objectOne = new Object();
-        var objName = document.getElementById('objName').innerHTML;
-        var objNum = document.getElementById('objNum').innerHTML;
-        var objCode = document.getElementById('objCode').innerHTML;
-        var objBus = document.getElementById('objBus').innerHTML;
+	$(document).ready(function(){
         
-        function submitClient(){
-        
-        	var result;
-        	objectOne[objName];
-            objectOne[objNum];
-            objectOne[objCode];
-            objectOne[objBus];
-            
-            console.log(objectOne);
-            result = result.concat(objectOne.getOwnPropertyNames(objectOne));
-            return result;
-        }
+        $("button").click(function() {
+  			var nome = document.getElementById('objName');
+            var num = document.getElementById('objNum');
+            var code = document.getElementById('objCode');
+            var bus = document.getElementById('objBus'); 
+           document.write("New Client: " + nome.value + " #: " + num.value + " Area Code: "  + code.value + " Business: " + bus.value);
+           
+		});
+	});
+    
+    
+    
 	</script>
 	<style>
 	body{
@@ -30,6 +26,7 @@
 		color: white;
 	}
 	p {
+    	margin-left:50%;
 		color:white;
 	}
 	box1 {
@@ -49,14 +46,17 @@
 	</style>
 </head>
 <body>
+
+	
+
 	<h1>Enter Client Info:</h1>
-    <h3>Name: <textarea id="objName"></textarea></h3>
-    <h3>Phone Number: <textarea id="objNum"></textarea></h3>
-    <h3>Area Code: <textarea id="objCode"></textarea></h3>
-    <h3>Business: <textarea id="objBus"></textarea></h3>
+    <h3>Name: <input type="text" id="objName" value=""></h3>
+    <h3>Phone Number: <input type="text" id="objNum" value=""></h3>
+    <h3>Area Code: <input type="text" id="objCode" value=""></h3>
+    <h3>Business: <input type="text" id="objBus" value=""></h3>
     
 	<p></p>
-	<button id='submit' onclick='submitClient(this)'>Submit</button>
+	<button>Submit</button>
 	<div id="box1"></div>
 	<section id="result_display"></section>
 </body>
